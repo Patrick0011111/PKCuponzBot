@@ -5,7 +5,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 load_dotenv()
 
-TOKEN = os.getenv("TELEGRAM_TOKEN")
+TOKEN = "8959162571:AAHZjB_QgHfvno51-Qc30 mclv5zmdN51qDY"
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
