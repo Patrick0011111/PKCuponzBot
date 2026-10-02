@@ -11,7 +11,7 @@ load_dotenv()
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 SHOPEE_APP_ID = os.getenv("SHOPEE_APP_ID")
-SHOPEE SECRET = os.getenv("SHOPEE_SECRET")
+SHOPEE_SECRET = os.getenv("SHOPEE_SECRET")
 SHOPEE_API_URL = "https://open-api.affiliate.shopee.com.br/graphql"
 
 
