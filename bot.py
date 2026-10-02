@@ -5,7 +5,9 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 load_dotenv()
 
-TOKEN = "8959162571:AAHZjB_QgHfvno51-Qc30mclv5zmdN51qDY"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+SHOPEE_APP_ID = os.getenv("SHOPEE_APP_ID")
+SHOPEE SECRET = os.getenv("SHOPEE_SECRET")
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
