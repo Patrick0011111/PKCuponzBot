@@ -91,7 +91,6 @@ def main():
     app = Application.builder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
-
     app.add_handler(
         MessageHandler(filters.TEXT & ~filters.COMMAND, receber_link)
     )
@@ -99,14 +98,14 @@ def main():
     print("PK Cuponz Bot online!")
 
     port = int(os.environ.get("PORT", "10000"))
-hostname = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+    hostname = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
 
-app.run_webhook(
-    listen="0.0.0.0",
-    port=port,
-    url_path="telegram",
-    webhook_url=f"https://{hostname}/telegram"
-)
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=port,
+        url_path="telegram",
+        webhook_url=f"https://{hostname}/telegram"
+    )
 
 
 if __name__ == "__main__":
