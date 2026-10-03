@@ -79,12 +79,12 @@ async def receber_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"🔥 Seu link de afiliado:\n\n{link_afiliado}"
         )
 
-    except Exception as erro:
-    print(f"Erro ao gerar link: {erro}", flush=True)
+       except Exception as erro:
+        print(f"Erro ao gerar link: {erro}", flush=True)
 
-    await update.message.reply_text(
-        f"❌ Erro: {erro}"
-    )
+        await update.message.reply_text(
+            f"❌ Erro: {erro}"
+        ) 
 
 
 def main():
