@@ -80,11 +80,11 @@ async def receber_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
     except Exception as erro:
-        print(f"Erro ao gerar link: {erro}")
+    print(f"Erro ao gerar link: {erro}", flush=True)
 
-        await update.message.reply_text(
-            "❌ Não consegui converter esse link. Confira se é um link válido da Shopee e tente novamente."
-        )
+    await update.message.reply_text(
+        f"❌ Erro: {erro}"
+    )
 
 
 def main():
